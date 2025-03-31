@@ -49,3 +49,56 @@ let dataTypeArray = [
     true
 ]
 console.log(dataTypeArray)
+
+// CREATIVE FUNCTION + ARRAY CHALLENGES
+
+// 01. getFirstItem(arr)
+// Write a function that returns the first item in an array.
+
+let arr = ["london", "paris", "nyc", "tokyo"]
+
+function getFirstItem(arr) {
+    return arr[0]
+}
+console.log(getFirstItem(arr))
+
+// 02. getLastItem(arr)
+// Write a function that returns the last item in an array.
+
+function getLastItem(arr) {
+    return arr[arr.length - 1];
+
+}
+console.log(getLastItem(arr))
+
+// 03. addItem(arr, item)
+// Write a function that adds an item to an array and returns the updated array.
+
+let item = "dublin"
+function addItem(arr, item) {
+    arr.push(item)
+    return arr
+}
+console.log(addItem(arr, item))
+
+// 04. describeArray(arr)
+// Write a function that returns a string: 
+// "The array has X items. The first item is Y."
+
+// Example: describeArray(["apple", "banana"]) → 
+// "The array has 2 items. The first item is apple."
+
+function describeArray(arr) {
+    return `The array has ${arr.length} items. The first item is ${arr[0]}.`
+}
+console.log(describeArray(arr))
+
+
+// 05. getUppercaseItems(arr)
+// Write a function that returns a new array with all string items converted to uppercase.
+// Example: getUppercaseItems(["hi", "bye"]) → ["HI", "BYE"]
+
+function getUppercaseItems(arr) {
+    return arr.map(item => item.toUpperCase());
+}
+console.log(getUppercaseItems(arr))
