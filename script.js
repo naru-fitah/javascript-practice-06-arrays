@@ -102,3 +102,52 @@ function getUppercaseItems(arr) {
     return arr.map(item => item.toUpperCase());
 }
 console.log(getUppercaseItems(arr))
+
+// 01. getMiddleItem(arr)
+// Write a function that returns the middle item in an array.
+// If the array has an even number of items, return the one just before the middle.
+
+let colors = ["blue", "red", "pink","yellow","aqua", "green"]
+
+function getMiddleItem(arr) {
+    let middleIndex = Math.floor(colors.length / 2)
+    return colors[middleIndex]
+}
+console.log(getMiddleItem(arr))
+
+// 02. removeLastItem(arr)
+// Write a function that removes the last item in an array and returns the updated array.
+
+function removeLastItem(arr) {
+    colors.pop()
+    return colors
+}
+console.log(removeLastItem(arr))
+
+// 03. startsWithA(arr)
+// Write a function that returns a new array with only the items that start with the letter "A" (uppercase or lowercase).
+
+function startsWithA(arr) {
+    let colorWithA = colors.filter(name => name.startsWith("a"))
+    return colorWithA
+}
+console.log(startsWithA(arr))
+
+// 04. getNumberItems(arr)
+// Write a function that returns how many numbers are in an array.
+// Example: [1, "hello", 5, true] → returns 2
+
+let numbersArray = [1, "hello", 5, true]
+function getNumberItems(arr) {
+    let result = arr.filter(item => typeof item === "number")
+    return result.length
+}
+console.log(getNumberItems(arr))
+
+// 05. reverseArray(arr)
+// Write a function that returns a new array with the items in reverse order.
+
+function reverseArray(arr) {
+    return [...arr].reverse();
+}
+console.log(reverseArray(arr))
